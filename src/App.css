@@ -1,38 +1,196 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  margin-right: 40px;
+  font-size: 1.1em;
+}
+
+.navbar-logo::first-letter {
+  color: blue;
+  font-size: 1.1em;
+  font-family: "Itim", cursive;
+}
+
+.navbar-nav a {
+  margin-right: 40px;
+}
+
+.auth-card {
+  width: 600px;
+  padding: 10px;
+}
+
+.type-item,
+.brand-card {
+  cursor: pointer;
+}
+
+.brand-row {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.brand-card {
+  width: 100px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.device-item-card {
+  width: 150px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.device-item-star {
+  font-size: 0.8em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.device-item-link {
+  text-decoration: none;
+  display: block;
+  color: #000;
+}
+
+.device-item-link:hover {
+  color: #000;
+}
+
+.device-page-img {
+  width: 300px;
+  height: 300px;
+}
+
+.device-page-container h2 {
+  font-size: 2.5em;
+}
+
+.device-page-info {
+  height: 100%;
+}
+
+.device-page-container h3 {
+  font-size: 1.5em;
+}
+
+.device-page-container h3 span {
+  font-size: 0.8em;
+}
+
+.device-page-container h4 {
+  font-size: 1em;
+}
+
+.device-page-container h4 button {
+  display: inline;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  color: orangered;
+  text-decoration: underline;
+}
+
+.device-card {
+  width: 300px;
+  height: 300px;
+}
+
+.device-page-container h4 button:hover {
+  text-decoration: none;
+}
+
+.device-page-price-basket {
+  height: 100%;
+  width: 100%;
+}
+
+.device-page-price-basket .tmp {
+  margin-bottom: auto;
+}
+
+.device-page-price-basket button {
+  margin-top: auto;
+  width: 100%;
+  background: orangered;
+  border: none;
+}
+
+.device-page-price-basket button:hover {
+  background: rgb(211, 63, 9);
+}
+
+.device-page-price-basket h3 {
+  color: green;
+}
+
+.description-list div:nth-child(even) {
+  background: lightgray;
+}
+
+.description-list div {
+  padding: 10px;
+}
+
+.loader-container {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.fan-loader {
+  background-color: #ff6d00;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 90px;
+  position: relative;
+  transform-origin: center;
+  animation: spin 0.5s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
+.fan-loader::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(202, 15, 15);
+  height: 80px;
+  width: 40px;
+  border-radius: 50% 50% 50% 50% / 85% 85% 15% 15%;
+  top: 36px;
+}
+
+.fan-loader::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(202, 15, 15);
+  height: 80px;
+  width: 40px;
+  border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+  top: -82px;
+}
+
+.email-tooltip-container {
+  background: rgba(255, 68, 0, 0.8);
+  color: #fff;
+}
+
+.email-tooltip-container svg {
+  cursor: pointer;
+}
+
+@keyframes spin {
+  100% {
     transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  0% {
+    transform: rotate(0deg);
   }
 }
