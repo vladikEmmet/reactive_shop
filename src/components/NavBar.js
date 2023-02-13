@@ -8,12 +8,15 @@ import { observer } from "mobx-react-lite";
 import {
   ABOUT_US_ROUTE,
   ADMIN_ROUTE,
+  BASKET_ROUTE,
   CONTACTS_ROUTE,
   LOGIN_ROUTE,
   SHOP_ROUTE,
 } from "../utils/consts";
 import { logout } from "../http/userApi";
 import ConfirmEmailTooltip from "./tooltips/ConfirmEmailTooltip";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = observer(() => {
   const { user } = useContext(Context);
@@ -54,6 +57,10 @@ const NavBar = observer(() => {
             </Nav>
             {user.isAuth ? (
               <Nav>
+                <Link to={BASKET_ROUTE} className="nav-link">
+                  <FontAwesomeIcon icon={faCartShopping} />
+                </Link>
+
                 {user.user.role === "ADMIN" && (
                   <Link to={ADMIN_ROUTE} className="nav-link">
                     Admin panel

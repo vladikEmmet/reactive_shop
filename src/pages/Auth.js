@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Container from "react-bootstrap/esm/Container";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
@@ -19,6 +19,10 @@ const Auth = observer(() => {
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
   const [errorMessage, setErrorMessage] = useState(true);
+
+  useEffect(() => {
+    document.title = "Authorization";
+  }, []);
 
   const handleClick = async () => {
     try {

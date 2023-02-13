@@ -20,9 +20,10 @@ export const login = async (email, password) => {
 export const check = async () => {
   const { data } = await $authHost.get("api/user/refresh");
   localStorage.setItem("token", data.accessToken);
-  return jwt_decode(data.refreshToken);
+  return { user: jwt_decode(data.refreshToken), basket: data.basket };
 };
 
 export const logout = async () => {
-  return $host.post("api/user/logout");
+  localStorage.removeItem("token");
+  return $authHost.post("api/user/logout");
 };

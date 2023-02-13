@@ -13,8 +13,8 @@ import Auth from "./pages/Auth";
 import Basket from "./pages/Basket";
 import Shop from "./pages/Shop";
 import DevicePage from "./pages/DevicePage";
-import AboutsUs from "./pages/AboutsUs";
-import Contacts from "./pages/Contacts";
+import AboutUs from "./pages/AboutUs";
+import Contacts from "./pages/Contacts/Contacts";
 
 export const authRoutes = [
   {
@@ -50,6 +50,6 @@ export const publicRoutes = [
   },
   {
     path: ABOUT_US_ROUTE,
-    element: <AboutsUs />,
+    element: <AboutUs />,
   },
 ];

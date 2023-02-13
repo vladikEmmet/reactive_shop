@@ -50,6 +50,8 @@ const DeviceModal = ({ show, onHide }) => {
     createDevice(formData).then((data) => {
       setName("");
       setPrice(0);
+      device.setSelectedBrand({});
+      device.setSelectedType({});
       setFile(null);
       onHide();
     });

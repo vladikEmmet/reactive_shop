@@ -14,6 +14,7 @@ const Shop = observer(() => {
   const { device } = useContext(Context);
 
   useEffect(() => {
+    document.title = "Reactive shop";
     fetchTypes().then((data) => device.setTypes(data));
     fetchBrands().then((data) => device.setBrands(data));
     fetchDevices(null, null, 1, device.limit).then((data) => {

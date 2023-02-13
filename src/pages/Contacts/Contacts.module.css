@@ -1,0 +1,121 @@
+:root {
+  --height: 100vh;
+  --width: 100%;
+  --depth: 200px;
+  --color-shelf-back-panel: #a17941;
+  --color-shelf-bottom-panel: #795832;
+  --color-shelf-bottom-panel-front: #9b7d50;
+  --color-shelf-side-panel: #956e39;
+  --color-shelf-shadow: #653b17;
+}
+
+.container {
+  width: var(--width);
+  height: var(--height);
+  perspective: 500px;
+  overflow: hidden;
+  background-color: var(--color-shelf-side-panel);
+  position: absolute;
+}
+
+.cuboid {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  transform-style: preserve-3d;
+}
+
+.cuboid__face {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  box-shadow: 0 1px 3px 0 black, 0 1px 2px -1px black;
+}
+
+.cuboid__face--front {
+  background: transparent;
+}
+
+.cuboid__face--back {
+  --extra-height: 3rem;
+  transform: translateY(calc(var(--extra-height) * -1))
+    translateZ(calc(var(--depth) * -1)) rotateY(180deg);
+  height: calc(var(--height) + var(--extra-height));
+  background: var(--color-shelf-back-panel);
+}
+
+.cuboid__face--top {
+  transform: translateZ(calc(var(--depth) * -0.5))
+    translateY(calc(var(--height) * -0.5)) rotateX(90deg);
+  height: var(--depth);
+}
+
+.cuboid__face--bottom {
+  transform: translateZ(calc(var(--depth) * -0.5))
+    translateY(calc(var(--height) * 0.5)) rotateX(-90deg);
+  height: var(--depth);
+  background: var(--color-shelf-bottom-panel);
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+  height: 100vh;
+  padding-bottom: 0.8rem;
+  box-sizing: border-box;
+  box-shadow: inset 0 10px 10px 0 var(--shadow-color, var(--color-shelf-shadow));
+}
+
+.contact {
+  height: 200px;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.contact:hover svg {
+  animation: fly 3s infinite;
+}
+
+.floor-thickness {
+  height: 1rem;
+  width: 100%;
+  background: var(--color-shelf-bottom-panel-front);
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cuboid__face--bottom {
+    display: none;
+  }
+
+  .contacts-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}

@@ -15,11 +15,19 @@ export default class UserStore {
     this._user = user;
   }
 
+  setBasket(basket) {
+    this._basket = basket;
+  }
+
   get isAuth() {
     return this._isAuth;
   }
 
   get user() {
     return this._user;
+  }
+
+  get basket() {
+    return this._basket;
   }
 }

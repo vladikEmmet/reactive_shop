@@ -5,16 +5,17 @@ import { observer } from "mobx-react-lite";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "./index";
 import { check } from "./http/userApi";
+import { fetchTypes, fetchBrands, fetchDevices } from "./http/deviceApi";
 import Loader from "./components/Loader";
 
 const App = observer(() => {
-  const { user } = useContext(Context);
+  const { user, device } = useContext(Context);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     check()
       .then((data) => {
-        user.setUser(data);
+        user.setUser(data.user);
         user.setIsAuth(true);
       })
       .finally(() => setLoading(false));

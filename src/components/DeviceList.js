@@ -9,7 +9,7 @@ const DeviceList = observer(() => {
   const findBrand = (id) => device.brands.find((brand) => brand.id === id);
 
   return (
-    <div className="d-flex flex-wrap justify-content-between">
+    <div className="device-list">
       {device.devices.map((device) => (
         <DeviceItem
           key={device.id}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import Button from "react-bootstrap/Button";
 import BrandModal from "../components/modals/BrandModal";
@@ -9,6 +9,10 @@ const AdminPanel = () => {
   const [isBrandModalVisible, setIsBrandModalVisible] = useState(false);
   const [isTypeModalVisible, setIsTypeModalVisible] = useState(false);
   const [isDeviceModalVisible, setIsDeviceModalVisible] = useState(false);
+
+  useEffect(() => {
+    document.title = "Admin panel";
+  }, []);
 
   return (
     <Container className="d-flex flex-column">

@@ -7,6 +7,7 @@ export default class DeviceStore {
     this._devices = [];
     this._selectedType = {};
     this._selectedBrand = {};
+    this._baskets = [];
     this._page = 1;
     this._totalCount = 0;
     this._limit = 12;
@@ -43,6 +44,10 @@ export default class DeviceStore {
     this._totalCount = num;
   }
 
+  setBaskets(basket) {
+    this._baskets = basket;
+  }
+
   get types() {
     return this._types;
   }
@@ -73,5 +78,9 @@ export default class DeviceStore {
 
   get limit() {
     return this._limit;
+  }
+
+  get basket() {
+    return this._baskets;
   }
 }
