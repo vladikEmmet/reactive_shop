@@ -20,7 +20,7 @@ const DeviceItem = ({ device, brand }) => {
             <Image
               width={150}
               height={150}
-              src={"http://localhost:5000/" + device.img}
+              src={process.env.REACT_APP_API_URL + device.img}
             />
             <div className="mt-1 d-flex justify-content-between align-items-center">
               <div className="text-black-50">{brand}</div>

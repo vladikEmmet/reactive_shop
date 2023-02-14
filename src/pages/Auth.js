@@ -18,7 +18,7 @@ const Auth = observer(() => {
   const isLogin = location.pathname === LOGIN_ROUTE;
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
-  const [errorMessage, setErrorMessage] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     document.title = "Authorization";
@@ -37,6 +37,7 @@ const Auth = observer(() => {
       navigate(SHOP_ROUTE);
     } catch (err) {
       setErrorMessage(err.response.data.message);
+      // console.log(err);
     }
   };
 

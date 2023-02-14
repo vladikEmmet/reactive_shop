@@ -64,7 +64,7 @@ const Basket = observer(() => {
                   <Col>
                     <div className="d-flex flex-row align-items-center">
                       <img
-                        src={"http://localhost:5000/" + product.Device.img}
+                        src={process.env.REACT_APP_API_URL + product.Device.img}
                         alt="device-img"
                         width={50}
                       />

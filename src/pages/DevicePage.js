@@ -77,7 +77,7 @@ const DevicePage = () => {
         <Col md={4}>
           <Image
             className="device-page-img"
-            src={"http://localhost:5000/" + device.img}
+            src={process.env.REACT_APP_API_URL + device.img}
           />
         </Col>
         <Col md={5}>
