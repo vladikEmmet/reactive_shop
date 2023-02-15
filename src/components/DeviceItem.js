@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Col from "react-bootstrap/esm/Col";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
@@ -20,10 +20,10 @@ const DeviceItem = ({ device, brand }) => {
             <Image
               width={150}
               height={150}
-              src={process.env.REACT_APP_API_URL + device.img}
+              src={process.env.REACT_APP_API_URL + "/" + device.img}
             />
             <div className="mt-1 d-flex justify-content-between align-items-center">
-              <div className="text-black-50">{brand}</div>
+              {brand && <div className="text-black-50">{brand.name}</div>}
               <div className="d-flex align-items-center">
                 <div>{device.rating}</div>
                 <FontAwesomeIcon className="device-item-star" icon={faStar} />

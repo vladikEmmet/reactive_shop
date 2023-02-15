@@ -24,6 +24,7 @@ const NavBar = observer(() => {
   const handleClick = async () => {
     try {
       const response = await logout();
+      console.log(response);
       localStorage.removeItem("token");
       user.setIsAuth(false);
       user.setUser({});

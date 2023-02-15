@@ -77,7 +77,7 @@ const DevicePage = () => {
         <Col md={4}>
           <Image
             className="device-page-img"
-            src={process.env.REACT_APP_API_URL + device.img}
+            src={process.env.REACT_APP_API_URL + "/" + device.img}
           />
         </Col>
         <Col md={5}>
@@ -127,8 +127,8 @@ const DevicePage = () => {
             width: 100,
             backgroundColor: "rgba(0, 0, 0, 0.7)",
             borderRadius: 10,
-            top: tooltipCoords.y - 60,
-            left: tooltipCoords.x - 50,
+            top: tooltipCoords.y,
+            left: tooltipCoords.x,
             color: "#fff",
           }}
         >

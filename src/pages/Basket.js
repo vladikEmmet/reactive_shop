@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useContext } from "react";
 import { Context } from "..";
 import { getBasket, removeFromBasket } from "../http/basketApi";
 
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Row } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 import { DEVICE_ROUTE } from "../utils/consts";
 import ErrorModal from "../components/modals/ErrorModal";
 
-const Basket = observer(() => {
+const Basket = () => {
   const [total, setTotal] = useState(0);
   const { device } = useContext(Context);
   const [errMessage, setErrMessage] = useState("");
@@ -26,7 +26,7 @@ const Basket = observer(() => {
         setTotal(sum());
       })
       .catch((err) => setErrMessage(err.message));
-  }, [device.basket]);
+  }, []);
 
   function sum() {
     let prices = 0;
@@ -38,7 +38,7 @@ const Basket = observer(() => {
   const remove = async (id) => {
     removeFromBasket(id)
       .then((data) => {
-        device.setBaskets(device.basket.filter((i) => i.id !== data.id));
+        device.setBaskets([...device.basket].filter((i) => i.id !== id));
       })
       .catch((err) => setErrMessage(err.response.data.message));
   };
@@ -105,6 +105,6 @@ const Basket = observer(() => {
       />
     </div>
   );
-});
+};
 
-export default Basket;
+export default observer(Basket);

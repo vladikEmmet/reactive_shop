@@ -49,22 +49,22 @@ const Contacts = () => {
                 y2="511.512"
                 gradientTransform="matrix(6 0 0 -6 4255 3247)"
               >
-                <stop offset="0" stop-color="#37aee2" />
-                <stop offset="1" stop-color="#1e96c8" />
+                <stop offset="0" stopColor="#37aee2" />
+                <stop offset="1" stopColor="#1e96c8" />
               </linearGradient>
               <path
                 id="path2995-1-0"
-                class="st0"
+                className="st0"
                 d="M240 120c0 66.3-53.7 120-120 120S0 186.3 0 120 53.7 0 120 0s120 53.7 120 120z"
               />
               <path
                 id="path2993"
-                class="st1"
+                className="st1"
                 d="M98 175c-3.9 0-3.2-1.5-4.6-5.2L82 132.2 152.8 88l8.3 2.2-6.9 18.8L98 175z"
               />
               <path
                 id="path2989"
-                class="st2"
+                className="st2"
                 d="M98 175c3 0 4.3-1.4 6-3 2.6-2.5 36-35 36-35l-20.5-5-19 12-2.5 30v1z"
               />
               <linearGradient
@@ -76,12 +76,12 @@ const Contacts = () => {
                 y2="78.245"
                 gradientTransform="matrix(1 0 0 -1 0 242)"
               >
-                <stop offset="0" stop-color="#eff7fc" />
-                <stop offset="1" stop-color="#fff" />
+                <stop offset="0" stopColor="#eff7fc" />
+                <stop offset="1" stopColor="#fff" />
               </linearGradient>
               <path
                 id="path2991"
-                class="st3"
+                className="st3"
                 d="M100 144.4l48.4 35.7c5.5 3 9.5 1.5 10.9-5.1L179 82.2c2-8.1-3.1-11.7-8.4-9.3L55 117.5c-7.9 3.2-7.8 7.6-1.4 9.5l29.7 9.3L152 93c3.2-2 6.2-.9 3.8 1.3L100 144.4z"
               />
             </svg>
@@ -103,8 +103,8 @@ const Contacts = () => {
                   r="3263.54"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset=".09" stop-color="#fa8f21" />
-                  <stop offset=".78" stop-color="#d82d7e" />
+                  <stop offset=".09" stopColor="#fa8f21" />
+                  <stop offset=".78" stopColor="#d82d7e" />
                 </radialGradient>
                 <radialGradient
                   id="b"
@@ -113,8 +113,8 @@ const Contacts = () => {
                   r="2572.12"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset=".64" stop-color="#8c3aaa" stop-opacity="0" />
-                  <stop offset="1" stop-color="#8c3aaa" />
+                  <stop offset=".64" stopColor="#8c3aaa" stopOpacity="0" />
+                  <stop offset="1" stopColor="#8c3aaa" />
                 </radialGradient>
               </defs>
               <path
@@ -131,9 +131,9 @@ const Contacts = () => {
         <div className={styles.contact}>
           <a href="mailto:shopconfirm@yandex.ru">
             <svg
-              shape-rendering="geometricPrecision"
-              text-rendering="geometricPrecision"
-              image-rendering="optimizeQuality"
+              shapeRendering="geometricPrecision"
+              textRendering="geometricPrecision"
+              imageRendering="optimizeQuality"
               xmlns="http://www.w3.org/2000/svg"
               width="2500"
               height="100"
@@ -156,8 +156,8 @@ const Contacts = () => {
                 y2="737.107"
                 gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"
               >
-                <stop offset="0" stop-color="#f8f6ef" />
-                <stop offset="1" stop-color="#e7e4d6" />
+                <stop offset="0" stopColor="#f8f6ef" />
+                <stop offset="1" stopColor="#e7e4d6" />
               </linearGradient>
               <path
                 fill="url(#a)"
@@ -188,8 +188,8 @@ const Contacts = () => {
                 y2="737.107"
                 gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"
               >
-                <stop offset="0" stop-color="#f8f6ef" />
-                <stop offset="1" stop-color="#e7e4d6" />
+                <stop offset="0" stopColor="#f8f6ef" />
+                <stop offset="1" stopColor="#e7e4d6" />
               </linearGradient>
               <path
                 fill="url(#b)"
@@ -204,8 +204,8 @@ const Contacts = () => {
                 y2="737.107"
                 gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"
               >
-                <stop offset="0" stop-color="#f8f6ef" />
-                <stop offset="1" stop-color="#e7e4d6" />
+                <stop offset="0" stopColor="#f8f6ef" />
+                <stop offset="1" stopColor="#e7e4d6" />
               </linearGradient>
               <path
                 fill="url(#c)"
@@ -220,8 +220,8 @@ const Contacts = () => {
                 y2="737.107"
                 gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"
               >
-                <stop offset="0" stop-color="#f8f6ef" />
-                <stop offset="1" stop-color="#e7e4d6" />
+                <stop offset="0" stopColor="#f8f6ef" />
+                <stop offset="1" stopColor="#e7e4d6" />
               </linearGradient>
               <path
                 fill="url(#d)"
@@ -236,8 +236,8 @@ const Contacts = () => {
                 y2="737.107"
                 gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"
               >
-                <stop offset="0" stop-color="#f8f6ef" />
-                <stop offset="1" stop-color="#e7e4d6" />
+                <stop offset="0" stopColor="#f8f6ef" />
+                <stop offset="1" stopColor="#e7e4d6" />
               </linearGradient>
               <path
                 fill="url(#e)"
@@ -252,8 +252,8 @@ const Contacts = () => {
                 y2="737.107"
                 gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"
               >
-                <stop offset="0" stop-color="#f8f6ef" />
-                <stop offset="1" stop-color="#e7e4d6" />
+                <stop offset="0" stopColor="#f8f6ef" />
+                <stop offset="1" stopColor="#e7e4d6" />
               </linearGradient>
               <path
                 fill="url(#f)"
@@ -268,8 +268,8 @@ const Contacts = () => {
                 y2="737.107"
                 gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"
               >
-                <stop offset="0" stop-color="#f8f6ef" />
-                <stop offset="1" stop-color="#e7e4d6" />
+                <stop offset="0" stopColor="#f8f6ef" />
+                <stop offset="1" stopColor="#e7e4d6" />
               </linearGradient>
               <path
                 fill="url(#g)"
@@ -284,8 +284,8 @@ const Contacts = () => {
                 y2="737.107"
                 gradientTransform="matrix(.0283 0 0 -.0283 248.36 225.244)"
               >
-                <stop offset="0" stop-color="#f8f6ef" />
-                <stop offset="1" stop-color="#e7e4d6" />
+                <stop offset="0" stopColor="#f8f6ef" />
+                <stop offset="1" stopColor="#e7e4d6" />
               </linearGradient>
               <path
                 fill="url(#h)"

@@ -24,6 +24,7 @@ export const check = async () => {
 };
 
 export const logout = async () => {
+  const res = await $authHost.post("api/user/logout");
   localStorage.removeItem("token");
-  return $authHost.post("api/user/logout");
+  return res;
 };
